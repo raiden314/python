@@ -1,4 +1,4 @@
 print("akira")
 # print(10+3)
 age = 18
-print(age)
+print("年齢は",age,"歳です")
