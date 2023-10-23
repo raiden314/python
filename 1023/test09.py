@@ -1,4 +1,8 @@
-for ループ変数 in 範囲 :
-    pass
+i = 1
+while i < 5 :
+    print("while(in)=",i)
+    i = i + 1
+    if i == 3 :
+        break
 else :
-    pass
+    print("while(out)=",i)
