@@ -7,6 +7,9 @@ slst.append("知立")
 # 二つのリストを結合
 lst = slst + addlst
 
+# 要素の削除
+del lst[4]
+
 # 93ページをチェック
 for i, val in enumerate(lst):
     print(i, val)
