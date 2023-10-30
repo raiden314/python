@@ -13,3 +13,5 @@ del lst[4]
 # 93ページをチェック
 for i, val in enumerate(lst):
     print(i, val)
+
+print(list(enumerate(lst)))

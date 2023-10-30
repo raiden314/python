@@ -1,0 +1,152 @@
+Python 3.10.4 (tags/v3.10.4:9d38120, Mar 23 2022, 23:13:41) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+a=[10,12,14]
+sum(a)
+36
+s=["名古屋","金山","神宮前"]
+ｓ
+['名古屋', '金山', '神宮前']
+import random
+i = random.randint(0,2)
+i
+2
+i = random.randint(0,len(s))
+i
+1
+i = random.randint(0,len(s))
+i
+1
+s[i]
+'金山'
+random.choice(s)
+'神宮前'
+random.choice(s)
+'金山'
+lst = list(range(21))
+lst
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+lst[2:4]
+[2, 3]
+lst[5:10]
+[5, 6, 7, 8, 9]
+# 0からスタートして、左の要素番号から出力し、右の要素番号の一つ前を出力して終了
+lst[15:]
+[15, 16, 17, 18, 19, 20]
+# 要素番号15から最後まで
+lst[-1]
+20
+# リストの一番最後の要素を取ってくる
+lst[-3:]
+[18, 19, 20]
+# リストの最後の要素から3つ目までを取ってくる
+lst[:-3]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+# リストの最後から3つ目までを取ってくる
+lst[1:-1]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# リストの最後の一つ前までをとってくる
+lst[2:-2]
+[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+# リストの二つ目から最後の2つ前までをとってくる
+s[2:5]
+['神宮前']
+s ="nagoya"
+s[2:5]
+'goy'
+lst[0:10:2]
+[0, 2, 4, 6, 8]
+lst[0:20:3]
+[0, 3, 6, 9, 12, 15, 18]
+lst[::3]
+[0, 3, 6, 9, 12, 15, 18]
+del lst[5:10]
+lst
+[0, 1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+
+l=[1,2,3]
+l
+[1, 2, 3]
+a=(1,2,3)
+a
+(1, 2, 3)
+a[0]
+1
+l[0]
+1
+l[0] = 999
+l
+[999, 2, 3]
+a[0] = 999
+Traceback (most recent call last):
+  File "<pyshell#49>", line 1, in <module>
+    a[0] = 999
+TypeError: 'tuple' object does not support item assignment
+# タプルは定数みたいに後から値を代入できない　添え字使うときも[]
+sta = {"名古屋","金山","神宮前"}
+sta
+{'金山', '神宮前', '名古屋'}
+sta[0]
+Traceback (most recent call last):
+  File "<pyshell#53>", line 1, in <module>
+    sta[0]
+TypeError: 'set' object is not subscriptable
+# 集合の特徴がないから、[]は使えない
+ary = {'名古屋':230,'上小田井','西春'}
+SyntaxError: ':' expected after dictionary key
+ary
+Traceback (most recent call last):
+  File "<pyshell#56>", line 1, in <module>
+    ary
+NameError: name 'ary' is not defined. Did you mean: 'any'?
+ary = {'名古屋':230,'上小田井':300,'西春':360}
+ary
+{'名古屋': 230, '上小田井': 300, '西春': 360}
+|| = {}
+SyntaxError: invalid syntax
+ll = {}
+type( ll )
+<class 'dict'>
+ary.keys()
+dict_keys(['名古屋', '上小田井', '西春'])
+list(ary.keys)
+Traceback (most recent call last):
+  File "<pyshell#63>", line 1, in <module>
+    list(ary.keys)
+TypeError: 'builtin_function_or_method' object is not iterable
+list(ary.keys())
+['名古屋', '上小田井', '西春']
+ary.values()
+dict_values([230, 300, 360])
+list(ary.values())
+[230, 300, 360]
+for i in ary.keys():
+    print(i)
+
+名古屋
+上小田井
+西春
+ll
+{}
+ll["金山"] = 200
+ll
+{'金山': 200}
+ll["神宮前"] = 0
+ｌｌ
+{'金山': 200, '神宮前': 0}
+t = (10,20,30)
+10 in t
+True
+"名古屋" in ary
+True
+# リストの中に該当するものがあるかを確認
+a = "<a href='link.html' alt='alt'>
+SyntaxError: unterminated string literal (detected at line 1)
+a = "<a href='link.html' alt='alt'>"
+a.split(" ")
+['<a', "href='link.html'", "alt='alt'>"]
+aa = a.split(" ")
+aa
+['<a', "href='link.html'", "alt='alt'>"]
+" ".join(a)
+"< a   h r e f = ' l i n k . h t m l '   a l t = ' a l t ' >"

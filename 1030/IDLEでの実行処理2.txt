@@ -1,0 +1,33 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> sta = {"名古屋","金山","神宮前"}
+>>> sta
+{'名古屋', '神宮前', '金山'}
+>>> sta
+{'名古屋', '神宮前', '金山'}
+>>> sta
+{'名古屋', '神宮前', '金山'}
+>>> # 集合型は、順番関係なしに出力される
+>>> sta1 = ("名古屋","尾頭橋","金山")
+>>> sta
+{'名古屋', '神宮前', '金山'}
+>>> sta1
+('名古屋', '尾頭橋', '金山')
+>>> sta - sta1
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    sta - sta1
+TypeError: unsupported operand type(s) for -: 'set' and 'tuple'
+>>> sta1 = {"名古屋","尾頭橋","金山"}
+>>> sta1
+{'名古屋', '尾頭橋', '金山'}
+>>> sta - sta1
+{'神宮前'}
+>>> sta1 - sta
+{'尾頭橋'}
+>>> sta | sta1
+{'神宮前', '金山', '名古屋', '尾頭橋'}
+>>> # 重複しないでデータを出力できる
+>>> sta & sta1
+{'名古屋', '金山'}
+>>> # 重複しているものだけを出力
