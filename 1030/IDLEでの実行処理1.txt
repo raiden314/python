@@ -1,0 +1,28 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> a=[10,12,14]
+>>> a
+[10, 12, 14]
+>>> a[0]
+10
+>>> len(a)
+3
+>>> for i in a:
+...     print(i)
+... 
+10
+12
+14
+>>> sum=0
+>>> for i in a:
+...     sum += i
+...     print(sum)
+... 
+10
+22
+36
+>>> sum(a)
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    sum(a)
+TypeError: 'int' object is not callable
