@@ -1,0 +1,25 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def func( *args ):
+...     print(args)
+... 
+...     
+>>> func( 11,22,33,44 )
+(11, 22, 33, 44)
+>>> func( 99,88,77,6,5,4,3,2,1)
+(99, 88, 77, 6, 5, 4, 3, 2, 1)
+>>> def func( *args ):
+...     for i in args:
+...         print(i)
+... 
+...         
+>>> func(11,22,33,44,55,66,77,88,99)
+11
+22
+33
+44
+55
+66
+77
+88
+99
