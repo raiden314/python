@@ -11,4 +11,4 @@ def feeCalc( amt ) :
 
 amount = input("売買価格を入力してください")
 fee = feeCalc(float(amount))
-print("仲介手数料は", fee, "万円です")
+print("仲介手数料は" +  str(fee) + "万円です")
