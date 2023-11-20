@@ -1,0 +1,48 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+a={10:"名古屋",20:"金山",30:"神宮前"}
+A
+Traceback (most recent call last):
+  File "<pyshell#1>", line 1, in <module>
+    A
+NameError: name 'A' is not defined. Did you mean: 'a'?
+a
+{10: '名古屋', 20: '金山', 30: '神宮前'}
+>>> def func( *args ):
+...     print(args)
+... 
+...     
+>>> func(a)
+({10: '名古屋', 20: '金山', 30: '神宮前'},)
+>>> func(aa=)
+SyntaxError: incomplete input
+>>> func(aa=a[10], bb=a[20])
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    func(aa=a[10], bb=a[20])
+TypeError: func() got an unexpected keyword argument 'aa'
+>>> 10/5
+2.0
+>>> int(10/5)
+2
+>>> 10//5
+2
+>>> def mul _func( a,b ) : retu
+SyntaxError: expected '('
+>>> def mul_func( a,b ) : reture a * b
+SyntaxError: invalid syntax
+>>> def mul_func( a,b ) : return a * b
+... 
+>>> mul_func( 10,5 )
+50
+>>> mul_func
+<function mul_func at 0x00000249BDCB3060>
+>>> #関数を表すオブジェクト(値)
+>>> 
+>>> func = mul_func
+>>> func( 10,5 )
+50
+>>> type(func)
+<class 'function'>
+>>> type(mul_func)
+<class 'function'>
