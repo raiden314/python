@@ -1,7 +1,7 @@
 while True:
+    h = input("身長をcmで入力してください")
+    w = input("体重をkgで入力してください")
     try :
-        h = input("身長をcmで入力してください")
-        w = input("体重をkgで入力してください")
         h = float(h) / 100
         w = float(w)
         bmi = w / ( h * h )
