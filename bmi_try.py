@@ -6,6 +6,8 @@ while True:
         w = float(w)
         bmi = w / ( h * h )
         break
+    except ValueError as e:
+        print(e)
     except ZeroDivisionError as e:
         print(e)
     except :
