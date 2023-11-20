@@ -6,8 +6,8 @@ animal_list = [
 ]
 fasted_list = sorted(
     animal_list,
-                        #listの二個目で並び替える
-    key = lambda  ani : ani[1],
+                        #listの三個目を元にして、並び替える
+    key = lambda  ani : ani[2],
     reverse = True
     )
 
