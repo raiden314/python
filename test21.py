@@ -4,4 +4,6 @@ animal_list = [
     ("シマウマ", 60),
     ("トナカイ", 80),
 ]
-print( sorted(animal_list) )
+fasted_list = sorted(animal_list)
+
+for i in fasted_list : print(i)
