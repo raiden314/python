@@ -8,8 +8,10 @@ while True:
         break
     except ValueError as e:
         print(e)
+        print("エラー：整数を入力してください")
     except ZeroDivisionError as e:
         print(e)
+        print("エラー：身長に0を入力しないでください")
     except :
         print( "エラー：もう一度入力してください" )
 str = "あなたのBMI値は" + str(bmi) + "です"
