@@ -1,0 +1,57 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+prices = {"Banana": 300, "Apple": 200, "Mango": 400}
+prices
+{'Banana': 300, 'Apple': 200, 'Mango': 400}
+for name in prices.keys()
+SyntaxError: incomplete input
+for name in prices.keys():
+    prices = prices[name]
+    s = "{0}は、{1}円です".format(name,price)
+    print(s)
+
+    
+Traceback (most recent call last):
+  File "<pyshell#7>", line 3, in <module>
+    s = "{0}は、{1}円です".format(name,price)
+NameError: name 'price' is not defined. Did you mean: 'prices'?
+for name in prices.keys():
+...     prices = prices[name]
+... 
+...     
+Traceback (most recent call last):
+  File "<pyshell#10>", line 1, in <module>
+    for name in prices.keys():
+AttributeError: 'int' object has no attribute 'keys'
+>>> for name in prices.keys():
+...     price = prices[name]
+...     s = "{0}は、{1}円です".format(name,price)
+...     print(s)
+... 
+...     
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    for name in prices.keys():
+AttributeError: 'int' object has no attribute 'keys'
+>>> prices
+300
+>>> prices = {"Banana": 300, "Apple": 200, "Mango": 400}
+>>> for name in prices.keys():
+...     price = prices[name]
+...     s = "{0}は、{1}円です".format(name,price)
+...     print(s)
+... 
+...     
+Bananaは、300円です
+Appleは、200円です
+Mangoは、400円です
+>>> 
+>>> for name, price in prices.items():
+...     s = "{0}は、{1}円です。".format(name, price)
+...     print(s)
+... 
+...     
+Bananaは、300円です。
+Appleは、200円です。
+Mangoは、400円です。
+>>> #for eathと似てる
