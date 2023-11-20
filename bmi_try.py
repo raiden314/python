@@ -6,6 +6,8 @@ while True:
         w = float(w)
         bmi = w / ( h * h )
         break
+    except ZeroDivisionError as e:
+        print(e)
     except :
         print( "エラー：もう一度入力してください" )
 str = "あなたのBMI値は" + str(bmi) + "です"
