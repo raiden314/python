@@ -1,0 +1,33 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> animal_list = {
+...     "ライオン": 58,
+...     "チーター": 110,
+...     "シマウマ": 60,
+...     "トナカイ": 80
+... }
+>>> animal_list
+{'ライオン': 58, 'チーター': 110, 'シマウマ': 60, 'トナカイ': 80}
+>>> animal_list.items()
+dict_items([('ライオン', 58), ('チーター', 110), ('シマウマ', 60), ('トナカイ', 80)])
+>>> #各要素がタプルになって返ってくる
+>>> faster_list = sorted()
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    faster_list = sorted()
+TypeError: sorted expected 1 argument, got 0
+>>> faster_list = sorted(
+...     animal_list.items(),
+...     key = lambda x : x[1]
+... )
+>>> faster_list
+[('ライオン', 58), ('シマウマ', 60), ('トナカイ', 80), ('チーター', 110)]
+>>> for name, value in faster_list :
+...     print( name,value )
+... 
+ライオン 58
+シマウマ 60
+トナカイ 80
+チーター 110
+>>> animal_list.items()
+dict_items([('ライオン', 58), ('チーター', 110), ('シマウマ', 60), ('トナカイ', 80)])
