@@ -1,0 +1,48 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+def genIto3():
+    yield 1
+    yield 2
+    yield 3
+
+    
+i = genIto3()
+>>> i
+<generator object genIto3 at 0x000001F8D476F950>
+>>> next(i)
+1
+>>> next(i)
+2
+>>> next(i)
+3
+>>> next(i)
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    next(i)
+StopIteration
+>>> #listやrangeで作れないものも作れる
+>>> help( print )
+Help on built-in function print in module builtins:
+
+print(*args, sep=' ', end='\n', file=None, flush=False)
+    Prints the values to a stream, or to sys.stdout by default.
+
+    sep
+      string inserted between values, default a space.
+    end
+      string appended after the last value, default a newline.
+    file
+      a file-like object (stream); defaults to the current sys.stdout.
+    flush
+      whether to forcibly flush the stream.
+
+>>> print( "nagano" )
+nagano
+>>> print( "nagan", end="," )
+nagan,
+>>> range(2,2)
+range(2, 2)
+>>> list(range(2,2))
+[]
+>>> list(range(2,3))
+[2]
