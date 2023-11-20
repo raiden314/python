@@ -5,4 +5,6 @@ animal_list = {
     "トナカイ": 80
 }
 fasted_list = sorted(animal_list)
-print(fasted_list)
+for name in animal_list.keys() :
+    value = animal_list[name]
+    print( name, value )
