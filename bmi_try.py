@@ -14,5 +14,7 @@ while True:
         print("エラー：身長に0を入力しないでください")
     except :
         print( "エラー：もう一度入力してください" )
+    finally :
+        print("BMI計算")
 str = "あなたのBMI値は" + str(bmi) + "です"
 print( str )
