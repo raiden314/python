@@ -6,6 +6,8 @@ resp = requests.get(url)
 resp.encoding = resp.apparent_encoding
 
 filename = "download.txt"
-f = open(filename, mode="w", encoding="utf-8")
-f.write(resp.text)
-f.close()
+# f = open(filename, mode="w", encoding="utf-8")
+# f.write(resp.text)
+# f.close()
+with open(filename, mode="w") as f:
+    f.write(resp.text)
