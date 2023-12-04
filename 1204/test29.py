@@ -1,4 +1,4 @@
-import requests
+import requests,urllib
 from bs4 import BeautifulSoup
 
 url = "https://news.yahoo.co.jp/categories/it"
@@ -13,3 +13,11 @@ ul = div.find("ul")
 alink = ul.find_all("a")
 for ele in alink:
     print(ele.text)
+
+#相対パスを絶対パスに変換
+url = "https://www.ymori.com/books/python2nen/test2.html"
+src = "./sample2.png"
+
+# imgsrc = "https://www.ymori.com/books/python2nen/sample2.png"
+imgurl = urllib.parse.urljoin(url,src)
+print( imgurl )
