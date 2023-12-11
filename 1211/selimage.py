@@ -4,7 +4,7 @@ import PIL.Image
 import PIL.ImageTk
 
 def dispPhoto( path ):
-    newImg = PIL.Image.open( path ).convert("L").resize((300,300))
+    newImg = PIL.Image.open( path ).convert("L").resize((32,32)).resize((700,300), resample=0)
     #デスクトップアプリ用に変換
     imgData = PIL.ImageTk.PhotoImage( newImg )
     imgLbl.configure(image=imgData)
@@ -17,7 +17,7 @@ def openFile():
         dispPhoto( path )
 
 root = tk.Tk()
-root.geometry("400x350")
+root.geometry("800x350")
 
 btn = tk.Button(text="ファイルを開く", command=openFile)
 imgLbl = tk.Label()
