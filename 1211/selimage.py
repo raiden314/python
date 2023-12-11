@@ -3,6 +3,8 @@ import tkinter.filedialog as fd
 
 def openFile():
     path = fd.askopenfilename()
+    if path:
+        print(path)
 
 root = tk.Tk()
 root.geometry("400x350")
