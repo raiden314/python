@@ -4,7 +4,7 @@ import PIL.Image
 import PIL.ImageTk
 
 def dispPhoto( path ):
-    newImg = PIL.Image.open( path )
+    newImg = PIL.Image.open( path ).resize((300,300))
     #デスクトップアプリ用に変換
     imgData = PIL.ImageTk.PhotoImage( newImg )
     imgLbl.configure(image=imgData)
