@@ -1,9 +1,11 @@
 import cgi
+import cgitb
 import sys,io
 sys.stdout = io.TextIOWrapper(
     sys.stdout.buffer, 
     encoding='utf-8'
 )
+cgitb.enable()
 
 print("Content-Type: text/html; charset=utf-8")
 print("")
@@ -15,7 +17,7 @@ for k in form.keys():
     print( k, " = ", form.getvalue(k), "<br>" )
 
 if "mode" in form:
-    print("<p>mode = ", form["mode"], "</p>")
+    print("<p>mode = ", frm["mode"], "</p>")
 else:
     print("<p>mode = ない</p>")
 
