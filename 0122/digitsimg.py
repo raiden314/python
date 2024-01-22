@@ -7,5 +7,5 @@ imgfile = PIL.Image.open(path).convert("L")
 data = imgfile
 
 
-plt.imshow(data, cmap="Greys")
+plt.imshow(data, cmap="grey")
 plt.show()
