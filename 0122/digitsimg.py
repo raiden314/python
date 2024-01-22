@@ -1,8 +1,9 @@
 from matplotlib import pyplot as plt
-import PIL.Image
+from PIL import Image
 
 path = "0122/2.png"
-imgfile = PIL.Image.open(path).convert("L")
+imgfile = Image.open(path).convert("L")
+imgfile = imgfile.resize((8,8))
 
 data = imgfile
 
