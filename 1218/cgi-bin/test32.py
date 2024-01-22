@@ -17,7 +17,7 @@ for k in form.keys():
     print( k, " = ", form.getvalue(k), "<br>" )
 
 if "mode" in form:
-    print("<p>mode = ", frm["mode"], "</p>")
+    print("<p>mode = ", form["mode"], "</p>")
 else:
     print("<p>mode = ない</p>")
 
